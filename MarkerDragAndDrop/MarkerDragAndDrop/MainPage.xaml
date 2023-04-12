@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:map="clr-namespace:Syncfusion.Maui.Maps;assembly=Syncfusion.Maui.Maps"
+             xmlns:local="clr-namespace:MarkerDragAndDrop"
+             x:Class="MarkerDragAndDrop.MainPage">
+
+    <ContentPage.Behaviors>
+        <local:MapsBehavior />
+    </ContentPage.Behaviors>
+    <ContentPage.Content>
+        <map:SfMaps>
+            <map:SfMaps.Layer>
+                <map:MapTileLayer x:Name="layer"
+                                  UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png">
+                    <map:MapTileLayer.Markers>
+                        <map:MapMarkerCollection>
+                            <map:MapMarker Latitude="28.7041"
+                                           Longitude="77.1025"
+                                           IconWidth="15"
+                                           IconHeight="15"/>
+                            <map:MapMarker Latitude="13.239945"
+                                           Longitude="19.391806"
+                                           IconWidth="15"
+                                           IconHeight="15"/>
+                        </map:MapMarkerCollection>
+                    </map:MapTileLayer.Markers>
+                </map:MapTileLayer>
+            </map:SfMaps.Layer>
+        </map:SfMaps>
+    </ContentPage.Content>
+
+</ContentPage>
